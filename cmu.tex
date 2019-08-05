@@ -209,33 +209,403 @@
 \pagestyle{plain}
 \section{Introduction}
 
-\input{resources/table_overview.tex}
+% H0 Overview
 
-\input{resources/table_overfiew_details.tex}
+\begin{table}
+\centering
+\caption{Overview of the Dataset}
+\label{tab:overview}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{}       & \textbf{Size} & \textbf{Effort} & \textbf{Prod\_Rate} & \textbf{Defects} \\ \hline
+\textbf{count}  & 16190       & 16190         & 16190             & 16190          \\ \hline
+\textbf{median} & 96          & 197           & 48                & 6              \\ \hline
+\textbf{iqr}    & 97          & 172           & 40                & 6             \\ \hline
+\end{tabular}
+\end{table}
 
 
+
+
+\begin{table}
+
+\scriptsize
+\renewcommand{\baselinestretch}{.5} 
+\centering
+\caption{H0: Task overview with Size, Effort, Production Rate and Defects}
+\label{tab:h0}
+ \resizebox{\linewidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{} & \multicolumn{3}{c|}{\textbf{size}} & \multicolumn{3}{c|}{\textbf{effort}} & \multicolumn{3}{c|}{\textbf{prod\_rate}} & \multicolumn{3}{c|}{\textbf{defect}} \\ \hline
+\textbf{Task} & \textbf{\#} & \textbf{rank} & \textbf{med} & \textbf{iqr} & \textbf{rank} & \textbf{med} & \textbf{iqr} & \textbf{rank} & \textbf{med} & \textbf{iqr} & \textbf{rank} & \textbf{med} & \textbf{iqr} \\ \hline
+\textbf{1} & \textbf{1619} & 2 & 81 & 90 & \cellcolor[HTML]{C0C0C0}1 & 146 & 132 & \cellcolor[HTML]{C0C0C0}1 & 56 & 54 & 3 & 7 & 7 \\ \hline
+\textbf{2} & \textbf{1619} & \cellcolor[HTML]{C0C0C0}1 & 62 & 60 & \cellcolor[HTML]{C0C0C0}1 & 146 & 107 & 2 & 43 & 38 & 2 & 5 & 5 \\ \hline
+\textbf{3} & \textbf{1619} & 2 & 72 & 78 & 2 & 183 & 149 & 2 & 41 & 39 & 3 & 6 & 6 \\ \hline
+\textbf{4} & \textbf{1619} & 2 & 72 & 54 & \cellcolor[HTML]{C0C0C0}1 & 154 & 107 & 2 & 48 & 38 & \cellcolor[HTML]{C0C0C0}1 & 4 & 5 \\ \hline
+\textbf{5} & \textbf{1619} & 2 & 81 & 54 & 2 & 168 & 124 & 2 & 48 & 37 & 2 & 5 & 5 \\ \hline
+\textbf{6} & \textbf{1619} & 3 & 153 & 93 & 3 & 288 & 234 & 2 & 51 & 41 & 3 & 7 & 8 \\ \hline
+\textbf{7} & \textbf{1619} & 2 & 81 & 60 & 2 & 202 & 134 & 2 & 40 & 34 & 2 & 5 & 4 \\ \hline
+\textbf{8} & \textbf{1619} & 2 & 75 & 59 & \cellcolor[HTML]{C0C0C0}1 & 163 & 142 & 2 & 44 & 36 & \cellcolor[HTML]{C0C0C0}1 & 4 & 5 \\ \hline
+\textbf{9} & \textbf{1619} & 3 & 142 & 102 & 3 & 284 & 209 & 2 & 50 & 36 & 3 & 7 & 7 \\ \hline
+\textbf{10} & \textbf{1619} & 4 & 208 & 120 & 4 & 334 & 253 & \cellcolor[HTML]{C0C0C0}1 & 60 & 41 & 3 & 7 & 7 \\ \hline
+\end{tabular}
+}
+\end{table}
+
+% END H0 Overview
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Scope 1
-\input{resources/table_pl_category.tex}
 
-\input{resources/table_pl_gen.tex}
 
-\input{resources/table_pl_level.tex}
+% H1a
+\begin{table}
+\scriptsize
+\renewcommand{\baselinestretch}{0.5} 
+\centering
+\caption{H1a: Productivity varies across different language categories and same within the category
+}
+\label{tab:h1a}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Task} & \textbf{Category} & \textbf{count} & \textbf{size} & \textbf{effort} \\ \hline
+ & \textbf{OO} & 771 & 99 & 154 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & 74 & 149 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}59 & 142 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{1}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}40 & \cellcolor[HTML]{C0C0C0}98 \\ \hline
+ & \textbf{OO} & 771 & 71 & 147 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & 56 & 149 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}54 & 177 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{2}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}42 & \cellcolor[HTML]{C0C0C0}99 \\ \hline
+ & \textbf{OO} & 771 & 93 & 199 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}61 & 173 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}57 & 223 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{3}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}55 & \cellcolor[HTML]{C0C0C0}148 \\ \hline
+ & \textbf{OO} & 771 & 82 & \cellcolor[HTML]{C0C0C0}156 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}66 & \cellcolor[HTML]{C0C0C0}149 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}75 & \cellcolor[HTML]{C0C0C0}132 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{4}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}54 & \cellcolor[HTML]{C0C0C0}143 \\ \hline
+ & \textbf{OO} & 771 & 91 & \cellcolor[HTML]{C0C0C0}168 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & 73 & \cellcolor[HTML]{C0C0C0}167 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}62 & \cellcolor[HTML]{C0C0C0}215 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{5}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}64 & \cellcolor[HTML]{C0C0C0}170 \\ \hline
+ & \textbf{OO} & 771 & 165 & \cellcolor[HTML]{C0C0C0}286 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}145 & \cellcolor[HTML]{C0C0C0}293 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}144 & \cellcolor[HTML]{C0C0C0}344 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{6}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}145 & \cellcolor[HTML]{C0C0C0}258 \\ \hline
+ & \textbf{OO} & 771 & \cellcolor[HTML]{C0C0C0}85 & \cellcolor[HTML]{C0C0C0}201 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}78 & \cellcolor[HTML]{C0C0C0}204 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}83 & \cellcolor[HTML]{C0C0C0}218 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{7}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}88 & \cellcolor[HTML]{C0C0C0}192 \\ \hline
+ & \textbf{OO} & 771 & 82 & \cellcolor[HTML]{C0C0C0}165 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}71 & \cellcolor[HTML]{C0C0C0}162 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}51 & \cellcolor[HTML]{C0C0C0}165 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{8}} & \textbf{VD} & 63 & \cellcolor[HTML]{C0C0C0}48 & \cellcolor[HTML]{C0C0C0}142 \\ \hline
+ & \textbf{OO} & 771 & 156 & \cellcolor[HTML]{C0C0C0}289 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}133 & \cellcolor[HTML]{C0C0C0}285 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}117 & \cellcolor[HTML]{C0C0C0}274 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{9}} & \textbf{VD} & 63 & 156 & \cellcolor[HTML]{C0C0C0}250 \\ \hline
+ & \textbf{OO} & 771 & 223 & \cellcolor[HTML]{C0C0C0}342 \\ \cline{2-5} 
+ & \textbf{PO} & 725 & \cellcolor[HTML]{C0C0C0}193 & \cellcolor[HTML]{C0C0C0}328 \\ \cline{2-5} 
+ & \textbf{SL} & 15 & \cellcolor[HTML]{C0C0C0}183 & \cellcolor[HTML]{C0C0C0}351 \\ \cline{2-5} 
+\multirow{-4}{*}{\textbf{10}} & \textbf{VD} & 63 & 217 & \cellcolor[HTML]{C0C0C0}287 \\ \hline
+\multicolumn{3}{|c|}{\textit{\textbf{TOP RANKED}}} & \textit{\begin{tabular}[c]{@{}c@{}}OO=0, PO=7,\\ SL=10, VD=8\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}OO=7, PO=7,\\ SL=7, VD=10\end{tabular}} \\ \hline
+\end{tabular}
+\end{table}
+
+% END H1a
+
+
+% H1b
+
+% H1b 4GL is twice as productive as 3GL
+
+\begin{table}
+
+\scriptsize
+\renewcommand{\baselinestretch}{0.5} 
+
+\centering
+\caption{H1b: 4GL is twice as productive as 3GL}
+\label{tab:h1b}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Task} & \textbf{PL\_Gen} & \textbf{count} & \textbf{size} & \textbf{effort} \\ \hline
+ & \textbf{3} & 1451 & 86 & 151 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{1}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}45 & \cellcolor[HTML]{C0C0C0}105 \\ \hline
+ & \textbf{3} & 1451 & 63 & 147 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{2}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}43 & \cellcolor[HTML]{C0C0C0}110 \\ \hline
+ & \textbf{3} & 1451 & 74 & 185 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{3}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}57 & \cellcolor[HTML]{C0C0C0}152 \\ \hline
+ & \textbf{3} & 1451 & 74 & \cellcolor[HTML]{C0C0C0}154 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{4}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}54 & \cellcolor[HTML]{C0C0C0}139 \\ \hline
+ & \textbf{3} & 1451 & 82 & \cellcolor[HTML]{C0C0C0}168 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{5}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}55 & \cellcolor[HTML]{C0C0C0}158 \\ \hline
+ & \textbf{3} & 1451 & 155 & 292 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{6}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}128 & \cellcolor[HTML]{C0C0C0}225 \\ \hline
+ & \textbf{3} & 1451 & \cellcolor[HTML]{C0C0C0}82 & \cellcolor[HTML]{C0C0C0}202 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{7}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}80 & \cellcolor[HTML]{C0C0C0}190 \\ \hline
+ & \textbf{3} & 1451 & 77 & \cellcolor[HTML]{C0C0C0}163 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{8}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}51 & \cellcolor[HTML]{C0C0C0}148 \\ \hline
+ & \textbf{3} & 1451 & 142 & 288 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{9}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}120 & \cellcolor[HTML]{C0C0C0}227 \\ \hline
+ & \textbf{3} & 1451 & 209 & 336 \\ \cline{2-5} 
+\multirow{-2}{*}{\textbf{10}} & \textbf{4} & 103 & \cellcolor[HTML]{C0C0C0}185 & \cellcolor[HTML]{C0C0C0}284 \\ \hline
+\multicolumn{3}{|c|}{\textit{\textbf{TOP RANKED}}} & \textit{\textbf{3G=1, 4G=10}} & \textit{\textbf{3G=4, 4G=10}} \\ \hline
+\end{tabular}
+\end{table}
+
+
+% END H1b
+
+
+% H1c
+% H1c Average number of LOC is proportional to PL Level
+
+\begin{table}
+\scriptsize
+\renewcommand{\baselinestretch}{0.5} 
+\centering
+\caption{H1c: Average number of LOC is proportional to PL Level}
+\label{tab:h1c}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c@{~}|c@{~}|c@{~}|c@{~}|c@{~}|c@{~}|c@{~}|c@{~}|c|}
+\hline
+\textbf{} & \textbf{} & \textbf{} & \multicolumn{3}{c|}{\textbf{size}} & \multicolumn{3}{c|}{\textbf{effort}} \\ \hline
+\textbf{Task} & \textbf{Level\_Bin} & \textbf{count} & \textbf{rank} & \textbf{median} & \textbf{iqr} & \textbf{rank} & \textbf{median} & \textbf{iqr} \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 82 & 89 & 3 & 165 & 144 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 105 & 117 & 3 & 181 & 132 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 69 & 84 & \cellcolor[HTML]{EFEFEF}2 & 128 & 98 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{C0C0C0}1 & 0 & 64 & 3 & 168 & 157 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 52 & 45 & \cellcolor[HTML]{EFEFEF}2 & 132 & 76 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{1}} & \textbf{25-28} & 28 & \cellcolor[HTML]{C0C0C0}1 & 46 & 35 & \cellcolor[HTML]{C0C0C0}1 & 85 & 47 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 60 & 53 & 3 & 160 & 113 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 72 & 68 & 3 & 167 & 103 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 56 & 68 & \cellcolor[HTML]{EFEFEF}2 & 130 & 99 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{C0C0C0}1 & 41 & 33 & 3 & 158 & 105 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 37 & 44 & \cellcolor[HTML]{EFEFEF}2 & 130 & 81 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{2}} & \textbf{25-28} & 28 & \cellcolor[HTML]{C0C0C0}1 & 32 & 45 & \cellcolor[HTML]{C0C0C0}1 & 78 & 44 \\ \hline
+ & \textbf{1-4} & 728 & 3 & 65 & 61 & \cellcolor[HTML]{EFEFEF}2 & 182 & 156 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 4 & 108 & 124 & 3 & 242 & 190 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & 3 & 67 & 67 & \cellcolor[HTML]{EFEFEF}2 & 168 & 110 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{C0C0C0}1 & 34 & 34 & \cellcolor[HTML]{EFEFEF}2 & 205 & 100 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{EFEFEF}2 & 57 & 67 & \cellcolor[HTML]{EFEFEF}2 & 150 & 96 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{3}} & \textbf{25-28} & 28 & \cellcolor[HTML]{EFEFEF}2 & 54 & 59 & \cellcolor[HTML]{C0C0C0}1 & 129 & 65 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 69 & 46 & 3 & 155 & 119 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 81 & 61 & 3 & 162 & 124 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 71 & 60 & 3 & 167 & 91 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{EFEFEF}2 & 73 & 49 & 4 & 300 & 379 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 51 & 38 & \cellcolor[HTML]{EFEFEF}2 & 149 & 63 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{4}} & \textbf{25-28} & 28 & \cellcolor[HTML]{C0C0C0}1 & 51 & 37 & \cellcolor[HTML]{C0C0C0}1 & 99 & 49 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 78 & 49 & \cellcolor[HTML]{EFEFEF}2 & 173 & 125 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 91 & 64 & \cellcolor[HTML]{EFEFEF}2 & 181 & 134 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 70 & 50 & \cellcolor[HTML]{EFEFEF}2 & 178 & 128 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{EFEFEF}2 & 67 & 92 & 3 & 275 & 198 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 50 & 20 & \cellcolor[HTML]{C0C0C0}1 & 120 & 86 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{5}} & \textbf{25-28} & 28 & 3 & 87 & 36 & \cellcolor[HTML]{C0C0C0}1 & 132 & 76 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 151 & 81 & \cellcolor[HTML]{EFEFEF}2 & 315 & 237 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 172 & 102 & \cellcolor[HTML]{EFEFEF}2 & 302 & 245 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 145 & 89 & \cellcolor[HTML]{EFEFEF}2 & 268 & 222 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{EFEFEF}2 & 135 & 108 & \cellcolor[HTML]{EFEFEF}2 & 416 & 251 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 85 & 90 & \cellcolor[HTML]{C0C0C0}1 & 179 & 136 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{6}} & \textbf{25-28} & 28 & \cellcolor[HTML]{EFEFEF}2 & 159 & 146 & \cellcolor[HTML]{C0C0C0}1 & 178 & 164 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 80 & 59 & \cellcolor[HTML]{C0C0C0}1 & 212 & 146 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & \cellcolor[HTML]{EFEFEF}2 & 83 & 63 & \cellcolor[HTML]{C0C0C0}1 & 213 & 123 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 82 & 68 & \cellcolor[HTML]{C0C0C0}1 & 212 & 122 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{EFEFEF}2 & 88 & 44 & \cellcolor[HTML]{C0C0C0}1 & 308 & 209 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 62 & 52 & \cellcolor[HTML]{C0C0C0}1 & 163 & 91 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{7}} & \textbf{25-28} & 28 & \cellcolor[HTML]{EFEFEF}2 & 86 & 65 & \cellcolor[HTML]{C0C0C0}1 & 157 & 92 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 75 & 59 & 3 & 176 & 174 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 85 & 65 & 3 & 189 & 137 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 73 & 50 & 3 & 165 & 113 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{C0C0C0}1 & 61 & 44 & 4 & 316 & 78 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 54 & 42 & \cellcolor[HTML]{EFEFEF}2 & 140 & 78 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{8}} & \textbf{25-28} & 28 & \cellcolor[HTML]{C0C0C0}1 & 42 & 40 & \cellcolor[HTML]{C0C0C0}1 & 81 & 50 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{C0C0C0}1 & 137 & 89 & \cellcolor[HTML]{EFEFEF}2 & 300 & 218 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & \cellcolor[HTML]{C0C0C0}1 & 162 & 120 & \cellcolor[HTML]{EFEFEF}2 & 311 & 237 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{C0C0C0}1 & 144 & 96 & \cellcolor[HTML]{EFEFEF}2 & 282 & 191 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & \cellcolor[HTML]{C0C0C0}1 & 122 & 91 & \cellcolor[HTML]{EFEFEF}2 & 445 & 130 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 88 & 73 & \cellcolor[HTML]{C0C0C0}1 & 179 & 89 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{9}} & \textbf{25-28} & 28 & \cellcolor[HTML]{C0C0C0}1 & 154 & 118 & \cellcolor[HTML]{C0C0C0}1 & 214 & 150 \\ \hline
+ & \textbf{1-4} & 728 & \cellcolor[HTML]{EFEFEF}2 & 200 & 115 & \cellcolor[HTML]{EFEFEF}2 & 352 & 275 \\ \cline{2-9} 
+ & \textbf{5-8} & 364 & 3 & 227 & 119 & \cellcolor[HTML]{EFEFEF}2 & 382 & 283 \\ \cline{2-9} 
+ & \textbf{9-12} & 216 & \cellcolor[HTML]{EFEFEF}2 & 200 & 123 & \cellcolor[HTML]{C0C0C0}1 & 312 & 208 \\ \cline{2-9} 
+ & \textbf{13-16} & 17 & 3 & 253 & 145 & 3 & 702 & 333 \\ \cline{2-9} 
+ & \textbf{17-20} & 33 & \cellcolor[HTML]{C0C0C0}1 & 144 & 114 & \cellcolor[HTML]{C0C0C0}1 & 260 & 121 \\ \cline{2-9} 
+\multirow{-6}{*}{\textbf{10}} & \textbf{25-28} & 28 & 3 & 220 & 148 & \cellcolor[HTML]{C0C0C0}1 & 256 & 175 \\ \hline
+\multicolumn{3}{|c|}{\textit{\textbf{TOP RANKED}}} & \multicolumn{3}{c|}{\textit{\begin{tabular}[c]{@{}c@{}}1-4=1, 4-8=1, 9-12=1,\\ 13-16=5, 17-20=9, 25-28=5\end{tabular}}} & \multicolumn{3}{c|}{\textit{\begin{tabular}[c]{@{}c@{}}1-4=1, 4-8=1, 9-12=2,\\ 13-16=1, 17-20=5, 25-28=10\end{tabular}}} \\ \hline
+\end{tabular}
+}
+\end{table}
+
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=\linewidth]{resources/h1c_example.png}
+\caption{H1c example plot for task 1: Average number of LOC is proportional to PL Level}
+\label{fig:h1c_example}
+\end{center}
+\end{figure}
+
+% END H1c
 
 % H1d
 NOTE: We tried to produce H1d: Perl Python Rexx Tcl (D1) takes half time than C C++ Java (D2). But we only had 16 examples on D1 and 1200 examples of D2, which we though is very biased. Though our disagree with the claim (they are mostly equivalent), but due to biased data, we can not make any comment on this. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF SCOPE 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Scope 2
 \input{resources/fig_pl_productivity.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF SCOPE 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Scope 3
 \input{resources/fig_defect_pl.tex}
 
-\input{resources/table_defect_c_cpp.tex}
+% H3b C++ is less error prone than C
+\begin{table}
+\centering
+\scriptsize
+\renewcommand{\baselinestretch}{.5} 
+\caption{H3b: C++ is less error prone than C}
+\label{tab:h3b}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Task} & \textbf{Language} & \textbf{count} & \textbf{defect} \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{1}} & \textbf{C++} & 327 & 10 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}6 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{2}} & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}7 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}6 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{3}} & \textbf{C++} & 327 & 9 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}4 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{4}} & \textbf{C++} & 327 & 6 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{5}} & \textbf{C++} & 327 & 6 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{6}} & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}10 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{7}} & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}5 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}3 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{8}} & \textbf{C++} & 327 & 5 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{9}} & \textbf{C++} & 327 & 9 \\ \hline
+ & \textbf{C} & 509 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-4} 
+\multirow{-2}{*}{\textbf{10}} & \textbf{C++} & 327 & 9 \\ \hline
+\multicolumn{3}{|c|}{\textbf{TOP RANKED}} & \textit{C=10, C++=3} \\ \hline
+\end{tabular}
+\end{table}
 
-\input{resources/table_defect_cpp_java.tex}
 
+
+
+% H3c C++ has two to three times more bug than Java per hour
+\begin{table}
+\scriptsize
+\centering
+\caption{H3c C++ has two to three times more bug than Java per hour}
+\label{tab:h3c}
+\begin{tabular}{cccc}
+\textbf{Task} & \textbf{Language} & \textbf{count} & \textbf{defect} \\
+ & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}10 \\
+\multirow{-2}{*}{\textbf{1}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}9 \\
+ & \textbf{C++} & 327 & 7 \\
+\multirow{-2}{*}{\textbf{2}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}5 \\
+ & \textbf{C++} & 327 & 9 \\
+\multirow{-2}{*}{\textbf{3}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}7 \\
+ & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}6 \\
+\multirow{-2}{*}{\textbf{4}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}5 \\
+ & \textbf{C++} & 327 & 6 \\
+\multirow{-2}{*}{\textbf{5}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}5 \\
+ & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}10 \\
+\multirow{-2}{*}{\textbf{6}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}8 \\
+ & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}5 \\
+\multirow{-2}{*}{\textbf{7}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}5 \\
+ & \textbf{C++} & 327 & \cellcolor[HTML]{C0C0C0}5 \\
+\multirow{-2}{*}{\textbf{8}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}5 \\
+ & \textbf{C++} & 327 & 9 \\
+\multirow{-2}{*}{\textbf{9}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}7 \\
+ & \textbf{C++} & 327 & 9 \\
+\multirow{-2}{*}{\textbf{10}} & \textbf{JAVA} & 163 & \cellcolor[HTML]{C0C0C0}7 \\
+\multicolumn{3}{c}{\textit{\textbf{TOP RANK}}} & \textit{JAVA=10, C++=5}
+\end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF SCOPE 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Scope 4
-\input{resources/table_exp_productivity.tex}
+
+
+% H4 with stat background
+\begin{table}
+\centering
+\scriptsize
+\renewcommand{\baselinestretch}{.5} 
+\caption{H4: Years of experience has a negative influence on productivity. }
+\label{tab: h4}
+\resizebox{.8\linewidth}{!}{
+\begin{tabular}{|c@{~}|c@{~}|c@{~}|c@{~}|c@{~}|c@{~}|c|}
+\hline
+\textbf{Task} & \textbf{Experience} & \textbf{count} & \textbf{size} & \textbf{effort} & \textbf{prod\_rate} & \textbf{defect} \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}112 & \cellcolor[HTML]{C0C0C0}180 & \cellcolor[HTML]{C0C0C0}64 & \cellcolor[HTML]{C0C0C0}9 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}105 & \cellcolor[HTML]{C0C0C0}172 & \cellcolor[HTML]{C0C0C0}60 & 8 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & 159 & \cellcolor[HTML]{C0C0C0}207 & \cellcolor[HTML]{C0C0C0}60 & \cellcolor[HTML]{C0C0C0}11 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{1}} & \textbf{20+} & 7 & \cellcolor[HTML]{C0C0C0}100 & \cellcolor[HTML]{C0C0C0}142 & \cellcolor[HTML]{C0C0C0}62 & \cellcolor[HTML]{C0C0C0}9 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}69 & \cellcolor[HTML]{C0C0C0}165 & \cellcolor[HTML]{C0C0C0}41 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}74 & \cellcolor[HTML]{C0C0C0}151 & \cellcolor[HTML]{C0C0C0}48 & \cellcolor[HTML]{C0C0C0}6 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & \cellcolor[HTML]{C0C0C0}82 & \cellcolor[HTML]{C0C0C0}182 & \cellcolor[HTML]{C0C0C0}50 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{2}} & \textbf{20+} & 7 & \cellcolor[HTML]{C0C0C0}98 & \cellcolor[HTML]{C0C0C0}179 & \cellcolor[HTML]{C0C0C0}40 & \cellcolor[HTML]{C0C0C0}8 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}92 & \cellcolor[HTML]{C0C0C0}227 & \cellcolor[HTML]{C0C0C0}44 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}104 & \cellcolor[HTML]{C0C0C0}200 & \cellcolor[HTML]{C0C0C0}45 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & 130 & \cellcolor[HTML]{C0C0C0}241 & \cellcolor[HTML]{C0C0C0}54 & \cellcolor[HTML]{C0C0C0}9 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{3}} & \textbf{20+} & 7 & 256 & \cellcolor[HTML]{C0C0C0}346 & \cellcolor[HTML]{C0C0C0}81 & 15 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}82 & \cellcolor[HTML]{C0C0C0}163 & \cellcolor[HTML]{C0C0C0}51 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}80 & \cellcolor[HTML]{C0C0C0}154 & \cellcolor[HTML]{C0C0C0}55 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & 97 & \cellcolor[HTML]{C0C0C0}181 & \cellcolor[HTML]{C0C0C0}55 & \cellcolor[HTML]{C0C0C0}6 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{4}} & \textbf{20+} & 7 & 114 & \cellcolor[HTML]{C0C0C0}251 & \cellcolor[HTML]{C0C0C0}46 & \cellcolor[HTML]{C0C0C0}8 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}92 & \cellcolor[HTML]{C0C0C0}186 & \cellcolor[HTML]{C0C0C0}50 & \cellcolor[HTML]{C0C0C0}6 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}89 & \cellcolor[HTML]{C0C0C0}164 & \cellcolor[HTML]{C0C0C0}53 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & 97 & \cellcolor[HTML]{C0C0C0}197 & \cellcolor[HTML]{C0C0C0}53 & 7 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{5}} & \textbf{20+} & 7 & 175 & \cellcolor[HTML]{C0C0C0}219 & \cellcolor[HTML]{C0C0C0}68 & 7 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}170 & \cellcolor[HTML]{C0C0C0}324 & \cellcolor[HTML]{C0C0C0}52 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}159 & \cellcolor[HTML]{C0C0C0}291 & \cellcolor[HTML]{C0C0C0}56 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & 202 & \cellcolor[HTML]{C0C0C0}373 & \cellcolor[HTML]{C0C0C0}57 & \cellcolor[HTML]{C0C0C0}11 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{6}} & \textbf{20+} & 7 & 265 & \cellcolor[HTML]{C0C0C0}401 & \cellcolor[HTML]{C0C0C0}60 & \cellcolor[HTML]{C0C0C0}24 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}82 & 219 & \cellcolor[HTML]{C0C0C0}40 & \cellcolor[HTML]{C0C0C0}6 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}86 & \cellcolor[HTML]{C0C0C0}192 & \cellcolor[HTML]{C0C0C0}42 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & \cellcolor[HTML]{C0C0C0}95 & 234 & \cellcolor[HTML]{C0C0C0}43 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{7}} & \textbf{20+} & 7 & \cellcolor[HTML]{C0C0C0}94 & 280 & \cellcolor[HTML]{C0C0C0}33 & \cellcolor[HTML]{C0C0C0}8 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}83 & 206 & 42 & \cellcolor[HTML]{C0C0C0}5 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}89 & \cellcolor[HTML]{C0C0C0}158 & \cellcolor[HTML]{C0C0C0}49 & \cellcolor[HTML]{C0C0C0}4 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & 112 & 237 & \cellcolor[HTML]{C0C0C0}49 & 6 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{8}} & \textbf{20+} & 7 & \cellcolor[HTML]{C0C0C0}100 & 253 & 36 & 7 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}156 & 324 & 47 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}163 & \cellcolor[HTML]{C0C0C0}287 & \cellcolor[HTML]{C0C0C0}59 & \cellcolor[HTML]{C0C0C0}7 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & \cellcolor[HTML]{C0C0C0}189 & 355 & \cellcolor[HTML]{C0C0C0}49 & 11 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{9}} & \textbf{20+} & 7 & \cellcolor[HTML]{C0C0C0}201 & 355 & \cellcolor[HTML]{C0C0C0}51 & 22 \\ \hline
+ & \textbf{0} & 282 & \cellcolor[HTML]{C0C0C0}227 & 401 & \cellcolor[HTML]{C0C0C0}57 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{1-10} & 148 & \cellcolor[HTML]{C0C0C0}229 & \cellcolor[HTML]{C0C0C0}319 & \cellcolor[HTML]{C0C0C0}66 & \cellcolor[HTML]{C0C0C0}8 \\ \cline{2-7} 
+ & \textbf{11-20} & 53 & \cellcolor[HTML]{C0C0C0}246 & 449 & \cellcolor[HTML]{C0C0C0}56 & 13 \\ \cline{2-7} 
+\multirow{-4}{*}{\textbf{10}} & \textbf{20+} & 7 & \cellcolor[HTML]{C0C0C0}309 & 525 & \cellcolor[HTML]{C0C0C0}61 & 15 \\ \hline
+\multicolumn{3}{|c|}{\textit{\textbf{TOP RANKED}}} & \textit{\begin{tabular}[c]{@{}c@{}}0=10, \\ 1-10=10,\\ 11-20=4,\\ 20+=6\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}0=6,\\ 1-10=10,\\ 11-20=6,\\ 20+=6\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}0=8,\\ 1-10=10,\\ 11-20=10,\\ 20+=9\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}0=10,\\ 1-10=9,\\ 11-20=4,\\ 20+=5\end{tabular}} \\ \hline
+\end{tabular}
+}
+\end{table}
+
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=\linewidth]{resources/h4_example_1.png}
+\caption{H4 example plot}
+\label{fig:h1e_example}
+\end{center}
+\end{figure}
 
 
 
